@@ -1,0 +1,4 @@
+Napoveda 2: 
+V souboru steps/generic.py ve tride Command ve funkci run() odkomentuj vypisy 
+pro snazsi debugging a pust test znovu. Procti si pozorne vystupy a porovnej 
+se zadanim ve scenari z grep.feature.
