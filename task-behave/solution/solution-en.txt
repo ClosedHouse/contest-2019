@@ -1,18 +1,7 @@
-Toto je reseni opravy testu grep.feature
-----------------------------------------
-
-Napoveda 1: Pust si "grep -h" v terminalu
-
-Napoveda 2: V souboru steps/generic.py ve tride Command ve funkci run() odkomentuj vypisy pro snazsi debugging a pust test znovu. Procti si pozorne vystupy a porovnej se zadanim ve scenari z grep.feature.
-
-Reseni: "grep -h" vypisuje vystup na stderr a ne na stdou, jak ocekava testovaci scenar. Je tedy treba
- - v grep.feature nahradit v danem kroku stdout za stderr
- - v steps/generic.py implementovat novy krok kontrolujici stderr. Staci zkopirovat krok kontrolujici stdout a nahradit jeden vystup druhym.
-
 This is a solution for fixing the grep.feature test.
 ----------------------------------------------------
 
-Hint 1: Run the 'grep -h' command in the terminal
+Hint 1: Run the command "grep -h" from the tested scenario directly in the terminal and compare the observed behaviour with the expected one. Is there a difference?
 
 Hint 2: Uncomment outputs for easier debugging in steps/generic.py file in function run() from the Command class. Run the test again and compare the obtained outputs with the assumption in the respective test scenario from grep.feature.
 
