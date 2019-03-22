@@ -26,5 +26,5 @@ Vyhodnoceni reseni
 ==================
 
 V adresari s testy spustte prikaz
-  # behave-task --eval
+  # task-behave --eval
 V pripade spravneho reseni obdrzite za splneni ulohy kod.
