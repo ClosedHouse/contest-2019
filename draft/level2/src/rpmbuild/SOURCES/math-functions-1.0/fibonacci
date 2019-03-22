@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+
+import os
+import sys
+
+
+def print_help(exit_code):
+    print("Usage:", os.path.basename(__file__), "NUMBER\n")
+    print("Prints NUMBER-th term of fibonacci sequence.\n")
+
+    exit(exit_code)
+
+
+def get_fibonacci(nth_term=0):
+    if nth_term == 0:
+        return 0
+    if nth_term == 1:
+        return 1
+
+    term_prev = 0
+    term_curr = 1
+
+    for i in range(nth_term-1):
+        tmp = term_curr
+        term_curr += term_prev
+        term_prev = tmp
+
+    return term_curr
+
+
+def main():
+    if (len(sys.argv) == 1):
+        sys.stderr.write("No argument given!\n")
+        print_help(1)
+
+    if (sys.argv[1] == '-h' or sys.argv[1] == '--help'):
+        print_help(0)
+
+    print(get_fibonacci(int(sys.argv[1])))
+
+
+if __name__ == "__main__":
+    main()
