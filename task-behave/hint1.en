@@ -1,0 +1,4 @@
+Hint 1: 
+Run the command "grep -h" from the tested scenario directly in the terminal 
+and compare the observed behaviour with the expected one. 
+Is there a difference?
