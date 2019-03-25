@@ -6,6 +6,7 @@ License:    GPLv2
 BuildArch:  noarch
 Group:      Applications/Math
 URL:        https://redhat.com
+Requires:   python3
 
 Source0:    https://redhat.com/%{name}-%{version}.tar.gz
 
