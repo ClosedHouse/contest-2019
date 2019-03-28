@@ -1,6 +1,6 @@
 Name:       math-functions
 Summary:    Package provides python implementation of factorial and fibonacci.
-Version:    1.0
+Version:    1.1
 Release:    0%{?dist}
 License:    GPLv2
 BuildArch:  noarch
@@ -28,5 +28,8 @@ echo "$HOME/bin/fibonacci" >> files.lst
 
 
 %changelog
-* Fri Mar 22 2019 Jakub Heger <jheger@redhat.com> - 1.0.1
+* Thu Mar 28 2019 Jakub Heger <jheger@redhat.com> - 1.1.0
+- Input validation
+
+* Fri Mar 22 2019 Jakub Heger <jheger@redhat.com> - 1.0.0
 - Initial commit

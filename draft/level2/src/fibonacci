@@ -12,6 +12,13 @@ def print_help(exit_code):
 
 
 def get_fibonacci(nth_term=0):
+    # Input validation
+    try:
+        nth_term = int(nth_term)
+    except ValueError:
+        sys.stderr.write("Argument doesn't seem to be an integer.\nExiting unsuccessfully.\n")
+        exit(10)
+
     if nth_term == 0:
         return 0
     if nth_term == 1:

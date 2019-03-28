@@ -12,6 +12,13 @@ def print_help(exit_code):
 
 
 def get_factorial(num=1):
+    # Input validation
+    try:
+        num = int(num)
+    except ValueError:
+        sys.stderr.write("Argument doesn't seem to be an integer.\nExiting unsuccessfully.\n")
+        exit(10)
+
     result = num
     for i in range(1, num):
         result = result * i
