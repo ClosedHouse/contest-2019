@@ -36,7 +36,7 @@ def main():
     if (sys.argv[1] == '-h' or sys.argv[1] == '--help'):
         print_help(0)
 
-    print(get_fibonacci(int(sys.argv[1])))
+    print(get_fibonacci(sys.argv[1]))
 
 
 if __name__ == "__main__":
