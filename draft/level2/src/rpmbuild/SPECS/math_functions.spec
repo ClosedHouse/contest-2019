@@ -17,11 +17,11 @@ TODO
 %setup -q
 %build
 %install
-install -m 0755 -d $RPM_BUILD_ROOT/$HOME/bin/
-install -m 0755 factorial $RPM_BUILD_ROOT/$HOME/bin/factorial
-install -m 0755 fibonacci $RPM_BUILD_ROOT/$HOME/bin/fibonacci
-echo "$HOME/bin/factorial" > files.lst
-echo "$HOME/bin/fibonacci" >> files.lst
+install -m 0755 -d $RPM_BUILD_ROOT/bin/
+install -m 0755 factorial $RPM_BUILD_ROOT/bin/factorial
+install -m 0755 fibonacci $RPM_BUILD_ROOT/bin/fibonacci
+echo "/bin/factorial" > files.lst
+echo "/bin/fibonacci" >> files.lst
 
 # TODO %files
 %files -f files.lst
