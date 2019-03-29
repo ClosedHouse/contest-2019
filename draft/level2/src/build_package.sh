@@ -10,8 +10,9 @@ dir_name="$package-$version"
 tar_name="$package-$version.tar.gz"
 
 # Prepare Sources
+rm -rf ./SOURCES
+mkdir ./SOURCES
 cd ./SOURCES
-rm -rf ./*
 mkdir "$dir_name"
 cp ../../factorial ../../fibonacci "./$dir_name"
 tar cvzf "$tar_name" "$dir_name"
@@ -22,4 +23,4 @@ rpmbuild -ba SPECS/math_functions.spec --define "_topdir $PWD"
 cp RPMS/noarch/* ../
 
 # Clean up
-rm -rf ./BUILD ./BUILDROOT ./RPMS ./SRPMS
+rm -rf ./BUILD ./BUILDROOT ./RPMS ./SRPMS ./SOURCES
