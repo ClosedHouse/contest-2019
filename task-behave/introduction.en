@@ -3,7 +3,7 @@ Introduction
 
 Behave (https://behave.readthedocs.io/en/latest/) is the Python implementation 
 of the Behavior-driven development method. You can use it to implement tests 
-writen in a human language (co called Gherkin language).
+writen in a human language (so called Gherkin language).
 Test scenarios are implemented using steps that may look as follows:
 
   Scenario: file -v prints the program version       # scenario name
