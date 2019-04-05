@@ -12,7 +12,7 @@ call: factorial <int>
     - test bude spatne napsany, bude ocekavat jinou hodnotu nez factorial bude vracet,
       ale chyba bude v testu a ne v programu
     - bude na userovi aby test opravil. test by mel byt dobre komentovany at je userovi
-      jasne kde ma co zmenit 
+      jasne kde ma co zmenit
 
 3) corner cases
 call: factorial 0
