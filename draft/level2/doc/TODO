@@ -1,5 +1,5 @@
-rewrite spec to install to /bin ($HOME currently isntalls to jheger - won't be such user)
 write tests
-write install.sh
-write docs
+write install.sh/cleanup.sh
+write docs(zadani, napovedy)
+write grade.sh
 remove this file
