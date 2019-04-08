@@ -5,8 +5,8 @@ Finish the implementation of the test scenario in grep.feature file. At the
 same time do not break with your changes already working scenario 
 file.feature. I.e. following commands should complete successfully
 
- 1. # behave file.feature
- 2. # behave grep.feature
+ 1. $ behave file.feature
+ 2. $ behave grep.feature
 
 Individual steps are implemented in steps/generic.py.
 
@@ -17,11 +17,11 @@ steps/generic_steps.py.
 Hints
 =====
 In case you are stucked and need an advice run
-  # task-behave --hint1
+  $ task-behave --hint1
 or even
-  # task-behave --hint2
+  $ task-behave --hint2
 or
-  # task-behave --hint3
+  $ task-behave --hint3
 
 It may be also beneficial to open another terminal and use 1st one for test
 updates and test execution and the second one for getting hint and running
@@ -30,7 +30,7 @@ the commands.
 Validate solution
 ===============
 To validate your solution run 
-  # task-behave --eval
+  $ task-behave --eval
 in a directory with test scenarios (or provide that directory as an argument of the command).
 If your solution passes the validation you would be given a code.
 

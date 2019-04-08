@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# install behave
+dnf -y install python3-behave
 # compile task-behave.py
 python3 -m compileall task-behave.py
 cp __pycache__/task-behave.cpython-*.pyc /usr/libexec/task-behave.pyc
@@ -14,5 +16,4 @@ echo Setup completed! To remove installed files run:
 echo   \# ./cleanup.sh
 echo 
 echo To initialize files for the behave exercise in directory DIR run: 
-echo   \# task-behave --setup DIR
-
+echo   $ task-behave --setup DIR

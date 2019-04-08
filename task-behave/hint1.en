@@ -1,4 +1,6 @@
 Hint 1:
-Run the command "grep -h" from the tested scenario directly in the terminal.
+Run the command
+  $ grep -h
+from the tested scenario directly in the terminal.
 Think about a reason why the string "Usage: grep" is not matched within the
 test scenario, although it is obviously present in the command output.

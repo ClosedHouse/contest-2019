@@ -10,11 +10,6 @@
 
 Feature: Basic file command test
 
-	@setup
-	Scenario: Ensure the tested package is installed
-		Given I install package "file"
-		 Then package "file" is installed
-
 	Scenario: file -v prints the program version
 		 When I run command "file -v"
 		 Then command exit code is "0"

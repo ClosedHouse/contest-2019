@@ -38,25 +38,6 @@ class Command(object):
         #sys.stdout.write(stdout)
         #sys.stderr.write(stderr)
         return CommandResult(real_command, process.returncode, stdout, stderr)
-        
-
-@given('I install package "{name}"')
-def given_I_install_package(context, name):
-    """
-    test step instalujici dany balicek
-    test step installing given package
-    """
-    context.command = Command.run("dnf -y install " + name)
-    assert context.command.exitcode is 0
-
-@then('package "{name}" is installed')
-def then_package_is_installed(context, name):
-    """
-    test step overujici ze dany balicek je nainstaloval
-    test step to verify that a given package is installed
-    """
-    context.command = Command.run("rpm -q " + name)
-    assert context.command.exitcode is 0
 
 @step('I run command "{command}"')
 def step_I_run_command(context, command):

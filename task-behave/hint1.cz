@@ -1,4 +1,6 @@
 Napoveda 1:
-Vyzkousejte si prikaz "grep -h" pouzity v testovacim scenari primo v terminalu.
+Vyzkousejte si prikaz
+  $ grep -h
+pouzity v testovacim scenari primo v terminalu.
 Co je pricinou toho, ze v testu neni nalezen retezec "Usage: grep", ackoliv
 ve vystupu prikazu se evidentne nachazi?

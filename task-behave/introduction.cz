@@ -14,6 +14,9 @@ Testovaci scenare sestavaji z kroku, ktere mohou vypadat napriklad takto:
      Then command exit code is "0"                  # kontrola vysledku
       And command stdout contains string "file-5."  # dalsi kontrola
 
+Jednotlive kroky jsou uvozeny slovy Given (predpoklad), When (akce), Then (reakce),
+pripadne And (totez co predchozi uvedeny).
+
 Samozrejme musite tyto kroky nejdrive implemetovat v Pythonu. Krasou totoho 
 pristupu je, ze jakmile mate zakladni kroky jednou implementovane, muzete je 
 kombinovat a vytvaret tak nove scenare. Dokonce je muze psat nekdo jiny, aniz 
@@ -26,13 +29,9 @@ https://behave.readthedocs.io/en/latest/tutorial.html
 Nez zacnete
 ===========
 
- - ujistete se, ze mate nainstalovan balicek python3-behave. Spustte
-     # rpm -q python3-behave
-   a pripadne jej doinstalujte prikazem
-     # dnf -y install python3-behave
  - overte, ze behave funguje korektne, napr. spustte testovaci scenar 
    file.feature 
-     # behave file.feature
+     $ behave file.feature
    mel by skoncit uspesne
  - podivejte se na kroky pouzite ve scenari file.feature a jejich prislusnou 
-   implementaci v souboru steps/generict_steps.py
+   implementaci v souboru steps/generic_steps.py

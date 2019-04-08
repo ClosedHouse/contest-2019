@@ -59,7 +59,6 @@ def initDB():
     db = {}
     for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'hint3.en', 'hint3.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt', 'CTIMNE.txt']:
         db[filename] = encode_text(read_file(filename))
-    db['LANG'] = encode_text(LANG)
     f = open(DBPATH, 'wb')
     pickle.dump(db, f)
     f.close()
@@ -72,14 +71,6 @@ def readDB():
     for k in db_enc:
         db_dec[k] = decode_text(db_enc[k])
     return db_dec
-
-def saveDB(db):
-    db_enc = {}
-    for k in db:
-        db_enc[k] = encode_text(db[k])
-    f = open(DBPATH, 'wb')
-    pickle.dump(db_enc, f)
-    f.close()
 
 def write_file(text, path):
     f = open(path, 'w')
@@ -164,14 +155,23 @@ if not os.path.isfile(DBPATH):
     print('database missing, did you run --init-db')
     sys.exit(1)
 
+try:
+  f = open(os.path.join(os.getenv("HOME"), ".task-behave-lang"))
+  s = f.readline().strip()
+  f.close()
+  if s in MSGS:
+    LANG = s
+except:
+  pass
+
 db = readDB()
-LANG=db['LANG']
 
 if args.lang:
     if args.lang[0] in MSGS.keys():
-        db['LANG'] = args.lang[0]
         LANG = args.lang[0]
-        saveDB(db)
+        f = open(os.path.join(os.getenv("HOME"), ".task-behave-lang"), 'w')
+        f.write(LANG)
+        f.close()
         print("%s %s" % (MSGS[LANG]['LANG_SET'], LANG))
         sys.exit(0)
     else:

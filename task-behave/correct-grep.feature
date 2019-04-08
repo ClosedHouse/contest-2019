@@ -10,11 +10,6 @@
 
 Feature: Basic grep command test
 
-	@setup
-	Scenario: Ensure the tested package is installed
-		Given I install package "grep"
-		 Then package "grep" is installed
-
 	Scenario: I can search text in a text file
 		When I run command "grep root /etc/passwd"
 		Then command exit code is "0"

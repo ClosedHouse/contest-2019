@@ -5,23 +5,23 @@ Dokoncit implementaci testu grep.feature tak, aby uspesne prosel. Zaroven
 zmenami nerozbit jiz funkcni test file.feature. Tj. nasledujici prikazy
 skonci uspesne spustenym testem
 
- 1. # behave file.feature
- 2. # behave grep.feature
+ 1. $ behave file.feature
+ 2. $ behave grep.feature
 
 Implementace jednotlivych kroku je v souboru steps/generic.py.
 
 Pro vyreseni ulohy budete muset upravit soubory grep.feature a 
-steps/generict_steps.py.
+steps/generic_steps.py.
 
 
 Napoveda
 ========
 Pokud si nebudete vedet rady, muzete si zobrazit napovedu prikazem
-  # task-behave --hint1
+  $ task-behave --hint1
 pripadne
-  # task-behave --hint2
+  $ task-behave --hint2
 ci
-  # task-behave --hint3
+  $ task-behave --hint3
 
 Take muze byt vyhodne otevrit si druhy terminal - prvni pouzivat pro upravu
 a pousteni testu a druhy pro ziskavani napoved a pripadne experimentovani.
@@ -30,5 +30,5 @@ Vyhodnoceni reseni
 ==================
 
 V adresari s testy spustte prikaz
-  # task-behave --eval
+  $ task-behave --eval
 V pripade spravneho reseni obdrzite za splneni ulohy kod.
