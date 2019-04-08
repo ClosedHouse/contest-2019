@@ -34,4 +34,5 @@ Nez zacnete
    file.feature 
      # behave file.feature
    mel by skoncit uspesne
-
+ - podivejte se na kroky pouzite ve scenari file.feature a jejich prislusnou 
+   implementaci v souboru steps/generict_steps.py

@@ -20,6 +20,8 @@ In case you are stucked and need an advice run
   # task-behave --hint1
 or even
   # task-behave --hint2
+or
+  # task-behave --hint3
 
 
 Validate solution

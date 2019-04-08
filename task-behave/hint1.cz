@@ -1,4 +1,4 @@
-Napoveda 1: 
-Vyzkousej si prikaz "grep -h" popsany v testovacim scenarem primo v terminalu 
-a porovnej ocekavane chovani s pozorovanym. Je zde nejaky rozdil?
-
+Napoveda 1:
+Vyzkousejte si prikaz "grep -h" popsany v testovacim scenarem primo v terminalu.
+Co je pricinou toho, ze v testu neni nalezen retezec "Usage: grep", ackoliv
+ve vystupu prikazu se evidentne nachazi?

@@ -32,4 +32,5 @@ Before you start
  - verify that behave works as expected, i.e. run 
      # behave file.feature
    to run the file.feature scenario.. it should pass.
-
+ - look at steps used in test scenario file.feature and its implementation
+   in steps/generict_steps.py.

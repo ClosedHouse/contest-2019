@@ -57,7 +57,7 @@ def decode_text(text):
 
 def initDB():
     db = {}
-    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt', 'CTIMNE.txt']:
+    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'hint3.en', 'hint3.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt', 'CTIMNE.txt']:
         db[filename] = encode_text(read_file(filename))
     db['LANG'] = encode_text(LANG)
     f = open(DBPATH, 'wb')
@@ -149,6 +149,8 @@ parser.add_argument('--hint1', dest='hint1', action='store_true',
                     default=False, help="print 1st hint")
 parser.add_argument('--hint2', dest='hint2', action='store_true',
                     default=False, help="print 2nd hint")
+parser.add_argument('--hint3', dest='hint3', action='store_true',
+                    default=False, help="print 3rd hint")
 parser.add_argument('--setup', dest='setup', nargs='?', action='store', metavar='DIR',
                     default="NA", help="setup the task in a given directory (current by default)")
 parser.add_argument('--eval', dest='eval', nargs='?', action='store', metavar='DIR',
@@ -187,6 +189,13 @@ if args.hint2:
     key = 'hint2.%s' % LANG
     if key not in db:
         key = 'hint2.en'
+    print(db[key])
+    sys.exit(0)
+
+if args.hint3:
+    key = 'hint3.%s' % LANG
+    if key not in db:
+        key = 'hint3.en'
     print(db[key])
     sys.exit(0)
 

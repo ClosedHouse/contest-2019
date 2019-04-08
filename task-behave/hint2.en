@@ -1,4 +1,4 @@
-Hint 2: 
+Hint 2:
 Uncomment outputs for easier debugging in steps/generic_steps.py file in function 
 run() from the Command class. Run the test again and compare the obtained 
 outputs with the assumption in the respective test scenario from grep.feature.

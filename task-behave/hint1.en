@@ -1,4 +1,4 @@
-Hint 1: 
-Run the command "grep -h" from the tested scenario directly in the terminal 
-and compare the observed behaviour with the expected one. 
-Is there a difference?
+Hint 1:
+Run the command "grep -h" from the tested scenario directly in the terminal.
+Think about a reason why the string "Usage: grep" is not matched within the
+test scenario, although it is obviously present in the command output.

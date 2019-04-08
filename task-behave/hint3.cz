@@ -1,0 +1,17 @@
+Napoveda 3:
+Programy bezne vyuzivaji dva vystupni proudy pro predavani dat.
+  stdout - Standardni vystup je pouzivan pro predavani beznych dat
+  stderr - Standardni chybovy vystup je pouzivan pro vypis chyb ci
+           diagnostickych informaci
+
+Programy mohou pouzivat oba tyto vystupy nezavisle. Pro uzivatele vsak
+v terminalu nemusi byt snadne odlisit jeden typ vystupu od druheho.
+
+Nasledujici prikaz zobrazi pouze standarni vystup prikazu "grep -h":
+# grep -h 2> /dev/null
+
+Nasledujici prikaz zobrazi pouze standarni chybovy vystup prikazu "grep -h":
+# grep -h > /dev/null
+
+Nyni byste jiz meli mit dostatek informaci pro identifikaci chyby
+v testovacim scenari a k jejimu opraveni a dokonceni testu.
