@@ -57,7 +57,7 @@ def decode_text(text):
 
 def initDB():
     db = {}
-    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt']:
+    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt', 'CTIMNE.txt']:
         db[filename] = encode_text(read_file(filename))
     db['LANG'] = encode_text(LANG)
     f = open(DBPATH, 'wb')
@@ -93,7 +93,7 @@ def run_behave_scenario(feature_file, tmpdir):
 
 def init_workdir(workdir):
     os.makedirs(os.path.join(workdir, 'steps'))
-    for name in ['file.feature', 'grep.feature', 'README.txt']:
+    for name in ['file.feature', 'grep.feature', 'README.txt', 'CTIMNE.txt']:
         write_file(db[name], os.path.join(workdir, name))
     write_file(db['generic_steps.py'], os.path.join(workdir, 'steps', 'generic_steps.py'))
     print("%s %s" % (MSGS[LANG]['CREATE_TESTDIR'], workdir))
