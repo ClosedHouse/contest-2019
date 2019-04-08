@@ -23,6 +23,8 @@ pripadne
 ci
   # task-behave --hint3
 
+Take muze byt vyhodne otevrit si druhy terminal - prvni pouzivat pro upravu
+a pousteni testu a druhy pro ziskavani napoved a pripadne experimentovani.
 
 Vyhodnoceni reseni
 ==================

@@ -23,6 +23,9 @@ or even
 or
   # task-behave --hint3
 
+It may be also beneficial to open another terminal and use 1st one for test
+updates and test execution and the second one for getting hint and running
+the commands.
 
 Validate solution
 ===============

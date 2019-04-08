@@ -5,7 +5,7 @@
 #
 # WORK IN PROGRESS - for some reason the test is failing. Can you fix it?
 # this is a basic test to verify the functionality of the grep command
-# grep command searches file a given text inside the text file
+# grep command searches for a given text inside the text file
 # e.g. 'grep root /etc/passwd'
 
 Feature: Basic grep command test
