@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+import os
+import re #TODO needed?
+import subprocess
+
+
+# Decode funcion
+def d(s):
+    r = ""
+    for c in s:
+        r += chr(ord(c) - 311)
+    return r
+
+
+def main():
+    os.chdir('/home/jheger/projects/contest-2019/level2/src/tests/factorial') # TODO CHANGE!!!
+
+    # correct string to be contained in beakerlib log
+    cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")
+    # c as 'code'
+    c = d("ƦƟŨŰŤƀŻŻƈŻ")
+    # p as 'process'
+    p = subprocess.run("make", capture_output=True)
+    # r as 'result'
+    r = p.stderr
+
+    # Check if winning conditions are met (mainly contains OVERALL RESULT: PASS, but also
+    # if test wasn't tampered with)
+    if r:
+        print("TODO congratz, code is: " + c)
+    else: 
+        print("TODO better luck next time")
+
+
+if __name__ == "__main__":
+    main()
