@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import os
-import re #TODO needed?
+import re  # TODO needed?
 import subprocess
 
 
@@ -13,7 +13,8 @@ def d(s):
 
 
 def main():
-    os.chdir('/home/jheger/projects/contest-2019/level2/src/tests/factorial') # TODO CHANGE!!!
+    # TODO CHANGE!!!
+    os.chdir('/home/jheger/projects/contest-2019/level2/src/tests/factorial')
 
     # correct string to be contained in beakerlib log
     cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")
@@ -23,7 +24,7 @@ def main():
     sp = subprocess.run("make", capture_output=True)
     # r as 'result'
     r = str(sp.stderr)
-    
+
     # Check if winning conditions are met (mainly contains OVERALL RESULT: PASS, but also
     # if test wasn't tampered with) <- TODO
     mcs = re.search(cs, r)
@@ -33,7 +34,6 @@ def main():
     else:
         print("TODO congratz, code is: " + c)
         exit(0)
-
 
 
 if __name__ == "__main__":
