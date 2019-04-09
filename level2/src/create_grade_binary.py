@@ -8,10 +8,11 @@ import shutil
 
 
 bash_string="""#!/bin/bash
-tail -c +91 $0 > /tmp/grade.tmp
+tail -c +116 $0 > /tmp/grade.tmp
 python3 /tmp/grade.tmp
+exit_code=$?
 rm /tmp/grade.tmp
-exit\n"""
+exit $exit_code\n"""
 
 def main():
     py_compile.compile("grade.py")
