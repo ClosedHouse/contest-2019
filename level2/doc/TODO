@@ -1,3 +1,5 @@
-write test
+rework test (also probably remove rlJournalPrintText for shorter and prettier output)
 write docs(zadani, napovedy)
+have someone test it
+remove src/test/zadani_testu.txt
 remove this file

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import os
-import re  # TODO needed?
+import re
 import subprocess
 
 
@@ -13,8 +13,7 @@ def d(s):
 
 
 def main():
-    # TODO CHANGE!!!
-    os.chdir('/home/jheger/projects/contest-2019/level2/src/tests/factorial')
+    os.chdir("test")
 
     # correct string to be contained in beakerlib log
     cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")

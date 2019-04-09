@@ -22,7 +22,7 @@ rpm -U --oldpackage "$LEVELNAME/src/factorial-1.0-1.fc29.noarch.rpm" > /dev/null
 mkdir -p "$TESTDIR"
 cd "$LEVELNAME/src"
 cp -r factorial* build_package.sh rpmbuild/ grade.sh "$TESTDIR" && echo "Copying factorial related files"
-cp -r tests/factorial "$TESTDIR/test" && echo "Copying test related files"
+cp -r test/ "$TESTDIR/" && echo "Copying test related files"
 cd ../doc
 # TODO docs echo "Copying docs"
 cd ..
