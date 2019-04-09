@@ -22,7 +22,7 @@ dnf install -y "$LEVELNAME/src/factorial-1.0-1.fc29.noarch.rpm"
 # creating testdir and copying test files
 mkdir -p "$TESTDIR"
 cd "$LEVELNAME/src"
-cp -r factorial* build_package.sh rpmbuild/ grade "$TESTDIR"
+cp -r factorial* build_package.sh rpmbuild/ grade.sh "$TESTDIR"
 cp -r tests/factorial "$TESTDIR/test"
 cd ../doc
 # TODO docs

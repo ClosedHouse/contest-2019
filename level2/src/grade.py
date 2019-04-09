@@ -19,17 +19,21 @@ def main():
     cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")
     # c as 'code'
     c = d("ƦƟŨŰŤƀŻŻƈŻ")
-    # p as 'process'
-    p = subprocess.run("make", capture_output=True)
+    # sp as 'subprocess'
+    sp = subprocess.run("make", capture_output=True)
     # r as 'result'
-    r = p.stderr
-
+    r = str(sp.stderr)
+    
     # Check if winning conditions are met (mainly contains OVERALL RESULT: PASS, but also
-    # if test wasn't tampered with)
-    if r:
+    # if test wasn't tampered with) <- TODO
+    mcs = re.search(cs, r)
+    if not mcs:
+        print("It seems some tests are still failing. Try to fix the issues.")
+        exit(1)
+    else:
         print("TODO congratz, code is: " + c)
-    else: 
-        print("TODO better luck next time")
+        exit(0)
+
 
 
 if __name__ == "__main__":
