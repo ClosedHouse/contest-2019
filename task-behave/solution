@@ -1,10 +1,6 @@
 This is a solution for fixing the grep.feature test.
 ----------------------------------------------------
 
-Hint 1: Run the command "grep -h" from the tested scenario directly in the terminal and compare the observed behaviour with the expected one. Is there a difference?
-
-Hint 2: Uncomment outputs for easier debugging in steps/generic.py file in function run() from the Command class. Run the test again and compare the obtained outputs with the assumption in the respective test scenario from grep.feature.
-
 Solution: "grep -h" prints the output to the stderr, not stdout as it is expected in the Scenario. To fix that you have to:
  - in grep.feature replace stdout with stderr in the respective step
  - in steps/generic.py implement new step for testing the stderr. You can simply copy the step checking the stdout and replace stdout with stderr in the copy.

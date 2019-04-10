@@ -10,7 +10,11 @@ Test scenarios are implemented using steps that may look as follows:
     Given I Install package "file"                   # initial setup
      When I run command "file -v"                    # action
      Then command exit code is "0"                   # verify action results
-      And command stdout contains string "file-5."   # another verification
+      And command stdout contains string "file-5."    # another verification
+
+Individual steps starts with words Given (assumption), When (action), Then 
+(reaction/result), eventually with And (same meaning as the one previously 
+used).
 
 Of course you need to implement those steps in Python first so that you can use 
 them. The benefit of this approach is that once you have the basic steps 
@@ -25,11 +29,8 @@ https://behave.readthedocs.io/en/latest/tutorial.html
 Before you start
 ================
 
- - ensure that python3-behave package is installed, i.e. run
-     # rpm -q python3-behave
-   and eventually install it using
-     # dnf -y install python3-behave
  - verify that behave works as expected, i.e. run 
-     # behave file.feature
+     $ behave file.feature
    to run the file.feature scenario.. it should pass.
-
+ - look at steps used in test scenario file.feature and its implementation
+   in steps/generic_steps.py.

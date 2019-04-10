@@ -1,5 +1,0 @@
-rewrite spec to install to /bin ($HOME currently isntalls to jheger - won't be such user)
-write tests
-write install.sh
-write docs
-remove this file

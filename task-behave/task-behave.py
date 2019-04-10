@@ -57,9 +57,8 @@ def decode_text(text):
 
 def initDB():
     db = {}
-    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt']:
+    for filename in ['file.feature', 'grep.feature', 'correct-grep.feature', 'failing-steps.feature', 'description.en', 'description.cz', 'hint1.en', 'hint2.en', 'hint1.cz', 'hint2.cz', 'hint3.en', 'hint3.cz', 'level_code', 'generic_steps.py', 'introduction.en', 'introduction.cz', 'README.txt', 'CTIMNE.txt']:
         db[filename] = encode_text(read_file(filename))
-    db['LANG'] = encode_text(LANG)
     f = open(DBPATH, 'wb')
     pickle.dump(db, f)
     f.close()
@@ -73,14 +72,6 @@ def readDB():
         db_dec[k] = decode_text(db_enc[k])
     return db_dec
 
-def saveDB(db):
-    db_enc = {}
-    for k in db:
-        db_enc[k] = encode_text(db[k])
-    f = open(DBPATH, 'wb')
-    pickle.dump(db_enc, f)
-    f.close()
-
 def write_file(text, path):
     f = open(path, 'w')
     f.write(text)
@@ -93,7 +84,7 @@ def run_behave_scenario(feature_file, tmpdir):
 
 def init_workdir(workdir):
     os.makedirs(os.path.join(workdir, 'steps'))
-    for name in ['file.feature', 'grep.feature', 'README.txt']:
+    for name in ['file.feature', 'grep.feature', 'README.txt', 'CTIMNE.txt']:
         write_file(db[name], os.path.join(workdir, name))
     write_file(db['generic_steps.py'], os.path.join(workdir, 'steps', 'generic_steps.py'))
     print("%s %s" % (MSGS[LANG]['CREATE_TESTDIR'], workdir))
@@ -149,6 +140,8 @@ parser.add_argument('--hint1', dest='hint1', action='store_true',
                     default=False, help="print 1st hint")
 parser.add_argument('--hint2', dest='hint2', action='store_true',
                     default=False, help="print 2nd hint")
+parser.add_argument('--hint3', dest='hint3', action='store_true',
+                    default=False, help="print 3rd hint")
 parser.add_argument('--setup', dest='setup', nargs='?', action='store', metavar='DIR',
                     default="NA", help="setup the task in a given directory (current by default)")
 parser.add_argument('--eval', dest='eval', nargs='?', action='store', metavar='DIR',
@@ -162,14 +155,23 @@ if not os.path.isfile(DBPATH):
     print('database missing, did you run --init-db')
     sys.exit(1)
 
+try:
+  f = open(os.path.join(os.getenv("HOME"), ".task-behave-lang"))
+  s = f.readline().strip()
+  f.close()
+  if s in MSGS:
+    LANG = s
+except:
+  pass
+
 db = readDB()
-LANG=db['LANG']
 
 if args.lang:
     if args.lang[0] in MSGS.keys():
-        db['LANG'] = args.lang[0]
         LANG = args.lang[0]
-        saveDB(db)
+        f = open(os.path.join(os.getenv("HOME"), ".task-behave-lang"), 'w')
+        f.write(LANG)
+        f.close()
         print("%s %s" % (MSGS[LANG]['LANG_SET'], LANG))
         sys.exit(0)
     else:
@@ -187,6 +189,13 @@ if args.hint2:
     key = 'hint2.%s' % LANG
     if key not in db:
         key = 'hint2.en'
+    print(db[key])
+    sys.exit(0)
+
+if args.hint3:
+    key = 'hint3.%s' % LANG
+    if key not in db:
+        key = 'hint3.en'
     print(db[key])
     sys.exit(0)
 

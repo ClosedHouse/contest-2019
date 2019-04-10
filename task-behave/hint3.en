@@ -1,0 +1,18 @@
+Hint 3:
+There two standard streams used for a program output:
+  stdout - Standard output is the stream where a program writes its ordinary
+           output data.
+  stderr - Standard error is another output stream typically used by programs
+           to output error messages or diagnostics
+
+Programs can use both streams independently, however a user in a terminal may
+not be able to easily distinguish which content comes from stdout and stderr.
+
+Following command shows only the stdout of the "grep -h" command.
+$ grep -h 2> /dev/null
+
+Following command shows only the stderr of the "grep -h" command.
+$ grep -h > /dev/null
+
+Knowing the above, you should now be able to identify why the test scenario
+is failing and what is remaining to complete the test.

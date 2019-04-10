@@ -1,0 +1,7 @@
+Aplikace komunikuje anglicky. Pokud se prijete alespon
+cast vystupu v cestine, spustte prikaz
+  $ task-behave --set-lang cz
+
+Ulohu zacnete spustenim nasledujicich prikazu v terminalu
+  $ task-behave --intro
+  $ task-behave --desc

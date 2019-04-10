@@ -2,10 +2,12 @@
 
 set -o pipefail
 
+spec_file="SPECS/factorial.spec"
+
 # Setup
 cd ./rpmbuild
-package=$(grep "Name:" SPECS/math_functions.spec  | awk -F ' ' '{ print  $2 }')
-version=$(grep "Version:" SPECS/math_functions.spec  | awk -F ' ' '{ print  $2 }')
+package=$(grep "Name:" $spec_file  | awk -F ' ' '{ print  $2 }')
+version=$(grep "Version:" $spec_file | awk -F ' ' '{ print  $2 }')
 dir_name="$package-$version"
 tar_name="$package-$version.tar.gz"
 
@@ -14,12 +16,12 @@ rm -rf ./SOURCES
 mkdir ./SOURCES
 cd ./SOURCES
 mkdir "$dir_name"
-cp ../../factorial ../../fibonacci "./$dir_name"
+cp ../../factorial "./$dir_name"
 tar cvzf "$tar_name" "$dir_name"
 cd ..
 
 # Build
-rpmbuild -ba SPECS/math_functions.spec --define "_topdir $PWD"
+rpmbuild -ba $spec_file --define "_topdir $PWD"
 cp RPMS/noarch/* ../
 
 # Clean up
