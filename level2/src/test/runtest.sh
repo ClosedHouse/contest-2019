@@ -31,8 +31,10 @@ rlJournalStart
         # porovnavaji jeho vysledek s vysledkem, ktery ocekavame.
         rlRun "factorial 2>&1 | grep \"No argument given!\"" 0 "Run factorial with no parameters"
         rlRun "factorial --help | grep \"Usage: factorial INTEGER\"" 0 "Run factorial --help"
-        rlAssertEquals "Calculate !1" $(factorial 1) 1 
-        rlAssertEquals "Calculate !5" $(factorial 5) 120
+        # hint: one of next 3 assertions has wrong expected result
+        # napoveda: jedna s nasledujicich 3 assertions ma spatny ocekavany vysledek
+        rlAssertEquals "Calculate !1" $(factorial 1) 1
+        rlAssertEquals "Calculate !5" $(factorial 5) 1
         rlAssertEquals "Calculate !0" $(factorial 0) 1
         rlRun "factorial -1 2>&1 | grep \"<not_defined>\"" 0 "Run factorial on negative number"
         rlRun "factorial foo 2>&1 | grep \"Argument doesn't seem to be an integer.\"" 10 \
