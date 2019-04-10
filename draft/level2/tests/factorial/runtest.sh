@@ -22,13 +22,6 @@ rlJournalStart
         # installed and performs general enviromental setup
         # Tato sekce instaluje balicek, ktery chceme testovat (pokud jeste
         # nainstalovany neni) a obecne nastavuje system
-        rlAssertRpm $PACKAGE || rlRun "rpm -ivh $RPM_PATH" 0 \
-            "Install tested rpm $RPM_PATH"
-        # Check that factorial command belongs to math-functions package
-        # TODO: fix specfile so it installs packages in /usr/bin,
-        # not /home/jheger
-        export PATH=/home/jheger/bin:$PATH
-        rlAssertBinaryOrigin factorial math-functions
         rlRun "TmpDir=\$(mktemp -d)" 0 "Creating tmp directory"
         rlRun "pushd $TmpDir"
     rlPhaseEnd
