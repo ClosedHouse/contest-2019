@@ -14,4 +14,6 @@ Nasledujici prikaz zobrazi pouze standarni chybovy vystup prikazu "grep -h":
 $ grep -h > /dev/null
 
 Nyni byste jiz meli mit dostatek informaci pro identifikaci chyby
-v testovacim scenari a k jejimu opraveni a dokonceni testu.
+v testovacim scenari a k jejimu opraveni a dokonceni testu. 
+Nezapomente take, ze kazdy krok z testovaciho scenare musi mit
+odpovidajici implementaci.
