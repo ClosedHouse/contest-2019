@@ -35,8 +35,8 @@ def main():
     # Check if test contains necessary asserts (protections against just
     # deleting/commenting out failing asserts)
     for ch in chl:
-        r = "^\s*" + re.escape(ch)
-        if re.search(r, cont, re.MULTILINE) is None:
+        reg = "^\s*" + re.escape(ch)
+        if re.search(reg, cont, re.MULTILINE) is None:
             print ("TODO: '" + ch + "' is missing from test, put it back")
             exit(255)
 
