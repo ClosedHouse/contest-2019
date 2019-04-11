@@ -24,6 +24,8 @@ def main():
     # rlRun "factorial -1" 1-255 "Factorial is not defined for negative integers"
     # rlRun "factorial foo 2>&1 | grep \"Argument does not seem to be an integer.\"" 10
     chl = [d("ƩƣŸƪƪƜƩƫżƨƬƘƣƪŗřźƘƣƚƬƣƘƫƜŗŧŘřŗśşƝƘƚƫƦƩƠƘƣŗŧŠŗŨ"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗŤŨřŗŨŤũŬŬŗřŽƘƚƫƦƩƠƘƣŗƠƪŗƥƦƫŗƛƜƝƠƥƜƛŗƝƦƩŗƥƜƞƘƫƠƭƜŗƠƥƫƜƞƜƩƪř"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗƝƦƦŗũŵŝŨŗƳŗƞƩƜƧŗƓřŸƩƞƬƤƜƥƫŗƛƦƜƪŗƥƦƫŗƪƜƜƤŗƫƦŗƙƜŗƘƥŗƠƥƫƜƞƜƩťƓřřŗŨ")]
+    # f as 'fail' -> ::   RESULT: FAIL
+    f = d("űűŗŗŗƉżƊƌƃƋűŗŽŸƀƃ")
     # sp as 'subprocess'
     sp = subprocess.run("make", capture_output=True)
     # r as 'result'
@@ -37,16 +39,24 @@ def main():
     for ch in chl:
         reg = "^\s*" + re.escape(ch)
         if re.search(reg, cont, re.MULTILINE) is None:
-            print ("TODO: '" + ch + "' is missing from test, put it back")
+            print ("Line:\n" + ch + "\nis missing from test, put it back.")
             exit(255)
 
-    # Check if test passes
+    fc = len(re.findall(f, r))
+    if fc == 1:
+        print("1 test phase is failing. Fix it to recieve the level code.")
+        exit(1)
+    elif fc > 1:
+        print(str(fc) + " test phases are failing. Fix them to recieve the level code." )
+        exit(fc)
+
+    # Final check if everything passes
     mcs = re.search(cs, r)
     if not mcs:
         print("It seems some tests are still failing. Try to fix the issues.")
-        exit(1)
+        exit(127)
     else:
-        print("TODO congratz, code is: " + c)
+        print("Congratulation! You managed to fix the test and the package.\nLevel code is: " + c)
         exit(0)
 
 
