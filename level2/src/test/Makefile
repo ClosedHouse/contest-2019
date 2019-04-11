@@ -25,8 +25,6 @@ clean:
 	rm -f *~ $(BUILT_FILES)
 
 
-include /usr/share/rhts/lib/rhts-make.include
-
 $(METADATA): Makefile
 	@echo "Owner:           Anna Khaitovich <akhaitov@redhat.com>" > $(METADATA)
 	@echo "Name:            $(TEST)" >> $(METADATA)
