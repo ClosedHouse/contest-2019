@@ -37,7 +37,7 @@ rlJournalStart
     rlPhaseStartTest "Sanity"
         rlRun "factorial 2>&1 | grep \"No argument given!\"" 1 "Run factorial with no parameters"
         rlRun "factorial --help | grep \"Usage: factorial INTEGER\"" 0 "Run factorial --help"
-        rlRun "factorial foo 2>&1 | grep \"Argument doesn't seem to be an integer.\"" 10 \
+        rlRun "factorial foo 2>&1 | grep \"Argument does not seem to be an integer.\"" 10 \
             "Run factorial with non-numeric arguments"
     rlPhaseEnd
 

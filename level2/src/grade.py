@@ -15,17 +15,32 @@ def d(s):
 def main():
     os.chdir("test")
 
-    # correct string to be contained in beakerlib log
+    # string indicating tests successful run of the tests -> OVERALL RESULT: PASS
     cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")
-    # c as 'code'
+    # c as 'code' -> oh19-IDDQD
     c = d("ƦƟŨŰŤƀŻŻƈŻ")
+    # chl as in check list, strings with asserts that must be present in the test:
+    # rlAssertEquals "Calculate 0!" $(factorial 0) 1
+    # rlRun "factorial -1" 1-255 "Factorial is not defined for negative integers"
+    # rlRun "factorial foo 2>&1 | grep \"Argument does not seem to be an integer.\"" 10
+    chl = [d("ƩƣŸƪƪƜƩƫżƨƬƘƣƪŗřźƘƣƚƬƣƘƫƜŗŧŘřŗśşƝƘƚƫƦƩƠƘƣŗŧŠŗŨ"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗŤŨřŗŨŤũŬŬŗřŽƘƚƫƦƩƠƘƣŗƠƪŗƥƦƫŗƛƜƝƠƥƜƛŗƝƦƩŗƥƜƞƘƫƠƭƜŗƠƥƫƜƞƜƩƪř"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗƝƦƦŗũŵŝŨŗƳŗƞƩƜƧŗƓřŸƩƞƬƤƜƥƫŗƛƦƜƪŗƥƦƫŗƪƜƜƤŗƫƦŗƙƜŗƘƥŗƠƥƫƜƞƜƩťƓřřŗŨ")]
     # sp as 'subprocess'
     sp = subprocess.run("make", capture_output=True)
     # r as 'result'
     r = str(sp.stderr)
 
-    # Check if winning conditions are met (mainly contains OVERALL RESULT: PASS, but also
-    # if test wasn't tampered with) <- TODO
+    with open('runtest.sh', 'r') as fh:
+        cont = fh.read()
+
+    # Check if test contains necessary asserts (protections against just
+    # deleting/commenting out failing asserts)
+    for ch in chl:
+        r = "^\s*" + re.escape(ch)
+        if re.search(r, cont, re.MULTILINE) is None:
+            print ("TODO: '" + ch + "' is missing from test, put it back")
+            exit(255)
+
+    # Check if test passes
     mcs = re.search(cs, r)
     if not mcs:
         print("It seems some tests are still failing. Try to fix the issues.")
