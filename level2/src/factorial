@@ -69,7 +69,7 @@ def main():
         arg = int(sys.argv[1])
     except ValueError:
         sys.stderr.write(
-            "Argument doesn't seem to be an integer.\nExiting unsuccessfully.\n")
+            "Argument does not seem to be an integer.\nExiting unsuccessfully.\n")
         exit(10)
 
     print(get_factorial(arg))
