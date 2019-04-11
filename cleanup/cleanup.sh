@@ -18,6 +18,10 @@ pushd "${CONTEST_DIR}"
     bash ./install_level2.sh
 popd
 
+pushd "${CONTEST_DIR}/task-behave"
+    bash ./setup.sh
+popd
+
 popd
 
 popd
