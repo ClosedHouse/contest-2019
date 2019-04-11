@@ -18,7 +18,7 @@ def main():
     # string indicating tests successful run of the tests -> OVERALL RESULT: PASS
     cs = d("ƆƍżƉŸƃƃŗƉżƊƌƃƋűŗƇŸƊƊ")
     # c as 'code' -> oh19-IDDQD
-    c = d("ƦƟŨŰŤƀŻŻƈŻ")
+    c = d("ƦƟŨŰƖƀŻŻƈŻ")
     # chl as in check list, strings with asserts that must be present in the test:
     # rlAssertEquals "Calculate 0!" $(factorial 0) 1
     # rlRun "factorial -1" 1-255 "Factorial is not defined for negative integers"
