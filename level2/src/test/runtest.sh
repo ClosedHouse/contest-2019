@@ -10,7 +10,7 @@
 
 set -o pipefail
 
-# Include Beaker environment
+# Source beakerlib test framework
 . /usr/share/beakerlib/beakerlib.sh || exit 1
 
 rlJournalStart
