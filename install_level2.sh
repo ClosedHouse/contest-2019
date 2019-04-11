@@ -1,7 +1,7 @@
 # This script will prepare level for next user
 # Must be run with root priveleges
 # Change variables bellow to correct values
-TESTUSER="testuser"
+TESTUSER="oh"
 LEVELNAME="level2"
 
 REQFILE="$LEVELNAME/src/requirements.txt"
