@@ -1,7 +1,5 @@
-remove level2/src/test/zadani_testu.txt
-rename grade.sh(and fix related scritps) to something like check_test.sh?
 rename level2 (and fix install script) to something more humane like task-QE?
-write docs(zadani, napovedy)
+write docs(zadani, napovedy, comments in test)
 have someone test it
 grep -r TODO level2/src/
 remove this file

@@ -23,7 +23,8 @@ def main():
     # rlAssertEquals "Calculate 0!" $(factorial 0) 1
     # rlRun "factorial -1" 1-255 "Factorial is not defined for negative integers"
     # rlRun "factorial foo 2>&1 | grep \"Argument does not seem to be an integer.\"" 10
-    chl = [d("ƩƣŸƪƪƜƩƫżƨƬƘƣƪŗřźƘƣƚƬƣƘƫƜŗŧŘřŗśşƝƘƚƫƦƩƠƘƣŗŧŠŗŨ"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗŤŨřŗŨŤũŬŬŗřŽƘƚƫƦƩƠƘƣŗƠƪŗƥƦƫŗƛƜƝƠƥƜƛŗƝƦƩŗƥƜƞƘƫƠƭƜŗƠƥƫƜƞƜƩƪř"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗƝƦƦŗũŵŝŨŗƳŗƞƩƜƧŗƓřŸƩƞƬƤƜƥƫŗƛƦƜƪŗƥƦƫŗƪƜƜƤŗƫƦŗƙƜŗƘƥŗƠƥƫƜƞƜƩťƓřřŗŨ")]
+    chl = [d("ƩƣŸƪƪƜƩƫżƨƬƘƣƪŗřźƘƣƚƬƣƘƫƜŗŧŘřŗśşƝƘƚƫƦƩƠƘƣŗŧŠŗŨ"), d("ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗŤŨřŗŨŤũŬŬŗřŽƘƚƫƦƩƠƘƣŗƠƪŗƥƦƫŗƛƜƝƠƥƜƛŗƝƦƩŗƥƜƞƘƫƠƭƜŗƠƥƫƜƞƜƩƪř"), d(
+        "ƩƣƉƬƥŗřƝƘƚƫƦƩƠƘƣŗƝƦƦŗũŵŝŨŗƳŗƞƩƜƧŗƓřŸƩƞƬƤƜƥƫŗƛƦƜƪŗƥƦƫŗƪƜƜƤŗƫƦŗƙƜŗƘƥŗƠƥƫƜƞƜƩťƓřřŗŨ")]
     # f as 'fail' -> ::   RESULT: FAIL
     f = d("űűŗŗŗƉżƊƌƃƋűŗŽŸƀƃ")
     # sp as 'subprocess'
@@ -47,7 +48,7 @@ def main():
         print("1 test phase is failing. Fix it to receive the level code.")
         exit(1)
     elif fc > 1:
-        print(str(fc) + " test phases are failing. Fix them to receive the level code." )
+        print(str(fc) + " test phases are failing. Fix them to receive the level code.")
         exit(fc)
 
     # Final check if everything passes
@@ -56,7 +57,7 @@ def main():
         print("It seems some tests are still failing. Try to fix the issues.")
         exit(127)
     else:
-        print("Congratulation! You managed to fix the test and the package.\nLevel code is: " + c)
+        print("Congratulations! You managed to fix both the test and the package.\nLevel code is: " + c)
         exit(0)
 
 
