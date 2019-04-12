@@ -29,7 +29,14 @@ cd ..
 
 # Build
 rpmbuild -ba $spec_file --define "_topdir $PWD"
-cp RPMS/noarch/* ../
+exit_code=$?
+if [[ "$exit_code" -eq 0 ]]; then
+    cp RPMS/noarch/* ../
+    echo -e "\nSuccessfuly created new package. Don't forget to install it before running the test!"
+else
+    echo "Something went wrong"
+fi
 
 # Clean up
 rm -rf ./BUILD ./BUILDROOT ./RPMS ./SRPMS ./SOURCES
+exit "$exit_code"
