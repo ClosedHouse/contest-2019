@@ -27,6 +27,6 @@ cd ../doc
 # TODO docs echo "Copying docs"
 cd ..
 chown -R "$TESTUSER:" $TESTDIR && echo "Changing level files owner to $TESTUSER"
-chown root: "$TESTDIR/grade.sh"
+chown root: "$TESTDIR/get_code.sh" && echo "Changing get_code.sh owner to root"
 
 echo "$LEVELNAME install finished"
