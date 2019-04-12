@@ -1,9 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#
-#   Makefile of /CoreOS/tests/Sanity/factorial
 #   Description: Basic sanity tests for factorial package
 #   Author: Anna Khaitovich <akhaitov@redhat.com>
-#
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 export TEST=/CoreOS/tests/Sanity/factorial
@@ -23,7 +20,6 @@ build: $(BUILT_FILES)
 
 clean:
 	rm -f *~ $(BUILT_FILES)
-
 
 $(METADATA): Makefile
 	@echo "Owner:           Anna Khaitovich <akhaitov@redhat.com>" > $(METADATA)

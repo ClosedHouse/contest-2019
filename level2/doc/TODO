@@ -1,5 +1,5 @@
-rename level2 (and fix install script) to something more humane like task-QE?
-write docs(zadani, napovedy, comments in test)
+rename level2 (and fix install script and other) to something more humane like task-QE?
+write docs(zadani, napovedy)
 have someone test it
 grep -r TODO level2/src/
 remove this file
