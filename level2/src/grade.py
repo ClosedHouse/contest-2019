@@ -44,10 +44,10 @@ def main():
 
     fc = len(re.findall(f, r))
     if fc == 1:
-        print("1 test phase is failing. Fix it to recieve the level code.")
+        print("1 test phase is failing. Fix it to receive the level code.")
         exit(1)
     elif fc > 1:
-        print(str(fc) + " test phases are failing. Fix them to recieve the level code." )
+        print(str(fc) + " test phases are failing. Fix them to receive the level code." )
         exit(fc)
 
     # Final check if everything passes
