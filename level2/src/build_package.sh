@@ -7,9 +7,16 @@ spec_file="SPECS/factorial.spec"
 # Setup
 cd ./rpmbuild
 package=$(grep "Name:" $spec_file  | awk -F ' ' '{ print  $2 }')
-version=$(grep "Version:" $spec_file | awk -F ' ' '{ print  $2 }')
-dir_name="$package-$version"
-tar_name="$package-$version.tar.gz"
+current_version=$(grep "Version:" $spec_file | awk -F ' ' '{ print  $2 }')
+# increment version and edit spec file
+x=${current_version%.*}
+y=${current_version#*.}
+y=$((y+1))
+next_version="$x.$y"
+sed -i -e "s/Version:    $current_version/Version:    $next_version/g" "$spec_file"
+
+dir_name="$package-$next_version"
+tar_name="$package-$next_version.tar.gz"
 
 # Prepare Sources
 rm -rf ./SOURCES
