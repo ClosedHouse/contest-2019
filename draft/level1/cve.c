@@ -8,7 +8,6 @@ void restricted()
     _exit(42);
 }
 
-
 void fce(char *input)
 {
     char buf[16] = { '\0' };
@@ -16,8 +15,6 @@ void fce(char *input)
     strcpy(buf, input);
     printf("%p\n", &fce);
 }
-
-
 
 int main(int argc, char **argv)
 {
