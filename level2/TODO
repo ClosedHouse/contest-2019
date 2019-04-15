@@ -1,5 +1,7 @@
 rename level2 (and fix install script and other) to something more humane like task-QE?
 write docs(zadani, napovedy)
+spellcheck
+add docs copy to install_level2.sh
 have someone test it
-grep -r TODO level2/src/
+grep -r TODO level2/
 remove this file

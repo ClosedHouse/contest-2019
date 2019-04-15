@@ -1,1 +1,3 @@
 TODO
+probably move to separate dir
+naming like hint-X.Y, X being subtask, Y increasingly more helpful hints

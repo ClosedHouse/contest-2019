@@ -1,0 +1,20 @@
+Most of the text in the task is written in two languages, first english then czech.
+Vetsina textu v tomto ukolu je napsana ve dvou jazycich, nejdrive anglicky, pak cesky.
+
+---EN---
+
+Hello, in this task will try little bit of what it is like to work as Red Hat tester and developer.
+You will get to see simplified version of how our tests look like and how packaging works.
+To complete this task you should know basics of working with Linux command line and a bit of programming (python),
+but you don't need to worry, there will be hints on how to continue, if you get stuck.
+Everything you will need to complete this task is contained in this directory level2/.
+Now open file assignment.txt which will explain exactly what you need to do to comlete the task.
+
+---CZ---
+
+Zdravim, v tomto ukolu si budete moct castecne vyzkouset jake to je pracovat v Red Hatu jako tester a developer.
+Uvidite zjednodusenou verzi toho jak vypadaji nase testy a jak funguje balickovani.
+Pro dokonceni ukolu byste znat zaklady prace s Linuxovou prikazou radkou a trochu programovani (python),
+ale nemusite se bat, pokud se na necem zaseknete, budete mit k dispozici rady jak pokracovat.
+Vsechno co budete potrebovat pro uspesne dokonceni ukolu se nachazi v tomto adresari level2/.
+Nyni otevrete soubor assignment.txt ktery am vysvetli co presne musite udelat abyste ukol dokoncili.
