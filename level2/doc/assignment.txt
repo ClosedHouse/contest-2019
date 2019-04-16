@@ -1,6 +1,3 @@
-TODO
-how to get the level code
-
 --- EN ---
 This file describes what you must do in order to complete this task, what tools to use, how to
 get hints if you get stuck and how to one get level code which (for 3 codes you might get a reward

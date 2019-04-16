@@ -24,7 +24,7 @@ cd "$LEVELNAME/src"
 cp -r factorial factorial-1.1-1.fc29.noarch.rpm build_package.sh rpmbuild/ get_code.sh "$TESTDIR" && echo "Copying factorial related files"
 cp -r test/ "$TESTDIR/" && echo "Copying test related files"
 cd ../doc
-# TODO docs echo "Copying docs"
+cp -r hints/ README assignment.txt "$TESTDIR" && echo "Copying docs"
 cd ..
 chown -R "$TESTUSER:" $TESTDIR && echo "Changing level files owner to $TESTUSER"
 chown root: "$TESTDIR/get_code.sh" && echo "Changing get_code.sh owner to root"
