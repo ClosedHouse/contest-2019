@@ -9,6 +9,7 @@ CONTEST_DIR="contest-2019"
 pushd /home/oh/
 echo -n > .bash_history
 rm -rf /var/tmp/*
+popd
 
 # can fail without issues
 pushd /root
@@ -21,8 +22,5 @@ popd
 pushd "${CONTEST_DIR}/task-behave"
     bash ./setup.sh
 popd
-
-popd
-
 popd
 
