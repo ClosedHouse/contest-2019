@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # This script runs exploit with different number as a argument.
-Example:
-./exploit 12
+# Example:
+# ./exploit 12
 
 # Tento skript spousti stale dokola exploit s rozdilnym cislem jako jeho argument.
-Priklad:
-./exploit 12
+# Priklad:
+# ./exploit 12
 
 # Maybe we need more tryies to achieve our goal. You should try seq command in terminal.
 # Mozna potrebujeme vice pokusu na nalezeni magickeho cisla. Muzete vyzkouset, co dela prikaz seq v terminalu
@@ -18,5 +18,5 @@ magic_bytes=$(seq 1 63)
 for magic_number in $magic_bytes; do
     echo "Trying magic number: $magic_number"
     echo "Zkousim magicke cislo: $magic_number"
-    ./exploit $magic_byte
+    ./exploit $magic_number | sed 's/A/4/g'
 done
