@@ -3,7 +3,7 @@ Vetsina textu v tomto ukolu je napsana ve dvou jazycich, nejdrive anglicky, pak 
 
 ---EN---
 
-Hello, in this task we'll try little bit of what it is like to work as Red Hat tester and developer.
+Hello, in this task you'll see a little bit of what it is like to work as Red Hat tester and developer.
 You will get to see simplified version of how our tests look and how packaging works.
 To complete this task you should know basics of working with Linux command line and a bit of programming (python),
 but you don't need to worry, there will be hints on how to continue, if you get stuck.
