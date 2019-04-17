@@ -1,0 +1,29 @@
+ENG
+Welcome brave QE. Work of QE sometimes, involves work with bugs in software which threads security of system directly. Basic issue is called "buffer overflow" which is able, to change flow of program in strange ways.
+On one side, you have vulnerable programs but on the other side you have programs called exploits, which are able to exploit issue in programs.
+
+Your task, in this level, is to find one magic number which reveals more deep secrets :).
+Little helper is your friend.
+
+File list:
+cve.c           - source code of vulnerable program
+cve             - compiled cve.c file
+exploit.c       - source code of exploitu
+exploit         - compiled exploit.c file
+bruteforce.sh   - !!! Little helper !!!
+
+==============================================================================
+
+CZ
+Vitej, chrabry QE. Prace QE obnasi obcas i praci s chybami v software, ktere primo ohrozuji bezpecnost systemu. Nejzakladnejsi chyba je takzvany "buffer overflow", ktery, jednoduse receno, zamota programu hlavu a ten se nasledne chova tak, jak to jeho autor asi ani nezamyslel. Jedna vec jsou chybne programy a dalsi veci jsou programy, ktere techto nedostatku vyuzivaji, takzvane exploity.
+
+Vasim ukolem v tomto levelu je najit jedno magicke cislo, ktere odhali vice tajemstvi :).
+Maly pomocnicek prozradi vice.
+
+Seznam souboru:
+cve.c           - zdrojovy kod chybneho program
+cve             - zkompilovany cve.c soubor
+exploit.c       - zdrojovy kod exploitu
+exploit         - zkompilovany exploit.c
+bruteforce.sh   - !!! Maly pomocnicek !!!
+

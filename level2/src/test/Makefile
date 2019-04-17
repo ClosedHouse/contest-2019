@@ -1,9 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#
-#   Makefile of /CoreOS/tests/Sanity/factorial
 #   Description: Basic sanity tests for factorial package
 #   Author: Anna Khaitovich <akhaitov@redhat.com>
-#
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 export TEST=/CoreOS/tests/Sanity/factorial
@@ -24,9 +21,6 @@ build: $(BUILT_FILES)
 clean:
 	rm -f *~ $(BUILT_FILES)
 
-
-include /usr/share/rhts/lib/rhts-make.include
-
 $(METADATA): Makefile
 	@echo "Owner:           Anna Khaitovich <akhaitov@redhat.com>" > $(METADATA)
 	@echo "Name:            $(TEST)" >> $(METADATA)
@@ -35,8 +29,8 @@ $(METADATA): Makefile
 	@echo "Description:     Basic sanity tests for factorial package" >> $(METADATA)
 	@echo "Type:            Sanity" >> $(METADATA)
 	@echo "TestTime:        5m" >> $(METADATA)
-	@echo "RunFor:          tests" >> $(METADATA)
-	@echo "Requires:        tests" >> $(METADATA)
+	@echo "RunFor:          factorial" >> $(METADATA)
+	@echo "Requires:        factorial" >> $(METADATA)
 	@echo "Priority:        Normal" >> $(METADATA)
 	@echo "License:         GPLv2+" >> $(METADATA)
 	@echo "Confidential:    no" >> $(METADATA)

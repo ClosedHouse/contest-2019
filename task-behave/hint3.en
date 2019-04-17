@@ -15,4 +15,5 @@ Following command shows only the stderr of the "grep -h" command.
 $ grep -h > /dev/null
 
 Knowing the above, you should now be able to identify why the test scenario
-is failing and what is remaining to complete the test.
+is failing and what is remaining to complete the test. Just remember that
+every step used in test scenario must have respective implementation.

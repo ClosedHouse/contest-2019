@@ -20,10 +20,11 @@ def d(s):
 def main():
     res = ""
     to_encode = sys.argv[1]
-    print(encode(to_encode))
+    encoded = encode(to_encode)
+    print(encoded)
 
-    #to_decode = "ƦƟŨŰŤƀŻŻƈŻ"
-    # print(d(to_decode))
+    decoded = d(encoded)
+    print(decoded)
 
 
 if __name__ == "__main__":

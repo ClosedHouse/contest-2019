@@ -1,0 +1,138 @@
+--- EN ---
+This file describes what you must do in order to complete this task, what tools to use, how to
+get hints if you get stuck and how to one get level code which (for 3 codes you might get a reward
+from Red Hat staff supervising this activity).
+
+A) Assignment
+Task scenario is as follows: You are a Red Hat Quality Assurance engineer and you are in charge
+of testing factorial package which provides /bin/factorial binary (you can type 'factorial 5' to
+command line to try in out).
+You have a test available which checks whether the factorial works as expected. The test is
+located in ./test directory. It consists of two files, Makefile which contains metadata (and which
+you can safely ignore) and runtest.sh which contains the test itself. You can run it either by
+calling 'make' inside the test directory or by directly running test/runtest.sh.
+However, as you might have guessed, the test is not passing at the moment and it is your goal
+to make it pass. The test consists of 5 phases; 3 of them are testing phases and failing at the moment.
+All the phases are commented in more detail directly in file test/runtest.sh.
+You'll successfully complete the task when whole test passes (no FAIL in log).
+
+To successfully complete the level, you need to do 3 subtasks; each will fix one phase:
+1)
+First phase called "Sanity" fails because developer forgot to take into consideration that
+someone could call factorial with non-numerical arguments (try calling 'factorial a' to see the
+traceback). Luckily he realized his error, fixed it and built a new package with correct
+behaviour. It is up to you to test it. If you install a new provided package with version 1.1.1
+(located in test directory: ./factorial-1.1-1.fc29.noarch.rpm), the first phase should pass without fail.
+Use dnf program to install the version, don't forget that it needs to run under root, so use
+sudo in front of dnf (don't worry, it will not ask for a password).
+
+2)
+Second phase "Common values" fails because the author of the test made a typo when writing the test.
+In order to fix it you must open the test/runtest.sh file, find the error and change the typo to
+proper value. More details are written in the file, in comments before the phase.
+
+3)
+Third phase "Edge cases" fails because developer again didn't think about all possible input values.
+This time he forgot to think about edge values such as factorial of 0 or negative integers
+(factorial of 0 is 1 and factorial of negative integers is not defined, so the program should exit
+with non-zero return code).
+However right now the developer is on holidays so it is up to you to fix it.
+First of all you need to implement changes in a file ./factorial so the program calcutes factorial
+as expected.
+Then you need to build a new version of a package. The process of building package can be
+confusing for a person not used to it so we prepared a script that will build it for you.
+Just run script ./build_package.sh and new rpm with a increased version should appear in the
+test directory.
+Last step is to install it the same way you installed it in first subtask.
+If you fixed both edge cases, third phase in the test should pass, if not do not worry, you
+try to implement it better, build a new package and install it as many times as you want.
+
+You may solve subtasks in any order you choose.
+
+B) Level code
+When you think you have successfully finished all subtasks you can run script get_code.sh
+(run ./get_code.sh from test directory) which will check your solution. If everything checks
+out, level code will be printed, otherwise you'll need to fix remaining issues.
+
+C) Hints
+Hints are here to help you out if you were to get stuck with solving a subtask. There are several
+hints for each subtask progressively getting more and more helpful/direct.
+They are located in directory hints/ and they are named in format hint-X-Y.txt where X is number
+of subtask and Y is order of the hint (the higher the Y the more helpful they get).
+Do not be afraid to use the hints; the purpose of this task is for you to learn something and
+ideally have a bit of fun, not to get frustrated because you cannot figure something out.
+General hint: do not be afraid to try things out, run the test as many times you want and read
+the test output closely to find exactly which lines in the test cause the fails, focus on those.
+
+First thing I would do is to try to run the test to see what are you working with.
+Good luck!
+
+
+---CZ---
+Tento soubor popisuje co musite udelat abyste splnili tento ukol, ktere nastroje pouzit, jak
+ziskat napovedy pokud se na necem zaseknete a jak ziskat 1 levelovy kod (za 3 levelove kody muzete
+ziskat nejakou odmenu od dohlizejicich Red Hat zamestnancu).
+
+A) Zadani
+Scenar tohoto ukolu je nasledujici: Jste Red Hat Quality Assurence inzenyr (tester) a mate na
+starost testovani balicku factorial, ktery poskytuje program /bin/factorial (muzete ho vyzkouset
+napsanim 'factorial 5' do prikazove radky).
+K dispozici mate test, ktery kontroluje jestli factorial funguje dle ocekavani. Test se nachazi
+v adresari ./test. Test se sklada ze dvou souboru, Makefile, ktery obsahuje metadata (a ktery
+muzete ignorovat) a runtest.sh, ktery obsahuje test. Muzete ho spustit tim ze zavolate 'make' v
+adresari test/ nebo primym volanim souboru test/runtest.sh.
+Nicmene, jak vam asi doslo, v tuto chvili test failuje a vasim cilem je zaridit aby uspesne
+prochazel. Test se sklada z 5 fazi; 3 z nich jsou testovaci faze a failuji.
+Vsechny faze jsou podrobneji okomentovany primo v souboru test/runtest.sh.
+Zadani splnite kdyz vam test bude uspesne prochazet (nebude mit zadny FAIL).
+
+Pro uspesne splneni ukolu musite dokoncit 3 podukoly; kazdy spravi jednu fazi:
+1)
+Prvni faze s nazvem "Sanity" failuje protoze developer zapomnel vzit v potaz ze nekdo by mohl
+zavolat factorial s necelocislenym argumentem (vyzkousejte si zavolat 'factorial a' a uvidite
+traceback). Nastesti si to vcas uvedomil, chybu opravil a vybuildil novou verzi balicku, ktera
+se chova spravne. Je na vas novy balicek otestovat. Pokud nainstalujete poskytnuty novy balicek
+s verzi 1.1.1 (umisteny v testovacim adresari: ./factorial-1.1-1.fc29.noarch.rpm), prvni faze testu
+by mel uspesne projit. Pouzijte dnf program na nainstalovani nove verze a nezapomente ze dnf musi
+bezet pod rootem, takze pred dnf napiste sudo (nebojte, nebude po vas chtit heslo).
+
+2)
+Druha faze "Common Values" failuje protoze autorka testu udelala preklep kdyz ho psala. Abyste
+test opravili musite otevrit soubor test/runtest.sh, najit chybu a misto preklepu napsat spravnou
+hodnotu. Vice detailu je napsanych v komentarich pred toutu fazi.
+
+3)
+Treti faze "Edge cases" failuje protoze developer opet poradne nepremyslel nad vsemi moznymi
+vstupnimi hodnotami. Tentokrat zapomnel na "edge cases" faktorialu, jako treba ze faktorial 0 je
+1 a nebo ze faktorial neni definovany pro zaporna cela cisla (program by tedy mel skoncit s
+nenulovym navratovym kodem).
+Nicmene v tuto chvili je developer na dovolene a je na vas abyste tuto chybu napravili.
+Nejprve budete muset implementovat zmeny v souboru ./factorial tak, aby program pocital faktorial
+podle ocekavani.
+Pak budete muset vybuildit novou verzi balicku. Proces buildeni balicku muze byt matouci pro
+nekoho kdo na to neni zvykli, proto jsme pripravili skript, ktery ho pro vas vubuildi. Jednoduse
+spuste skript ./build_package.sh a nove rpm s vyssi verzi by se melo objevit v testovacim adresari.
+Poslednim krokem je novy balicek naistalovat, stejne jako v prvnim podukolu.
+Pokud jste opravili oba edge casy, treti faze by mela uspesne projit, pokud nebude prochazet,
+nebojte, pokuste se to implementovat lepe, vybuildete novy balicek a nainstalujte kolikrat
+budete chtit.
+
+Podukoly muzete vyresit v jakemkoli poradi chcete.
+
+B) Kod levelu
+Az si budete myslet ze jste uspesne splnili vsechny podukoly muzete spustit skript ./get_code.sh,
+ktery zkontroluje vase reseni. Pokud bude vse ok (cely test uspesne projde), na obrazovce se
+zobrazi kod levelu, jinak budute muset spravit zbyvajici chyby.
+
+C) Napovedy
+Napovedy jsou vam k dispozici pokud se zaseknete pri plneni podukolu. Pro kazdy podukol existuje
+nekolik napoved, postupne vice napomocne.
+Nachazeji se v adresari hints/ a jsou pojmenovany ve formatu hint-X-Y.txt, kde X je cislo podukolu
+a Y je poradi napovedy (cim vyssi tim je napoveda vice napomocna).
+Nebojte se napovedy pouzivat; smyslem toho ukolu je neco naucit a idealne se i trochu pobavit, nema
+smysl se frustrovat, protoze nemuzete na neco prijit.
+Obecna rada: nebojte se zkouset ruzne veci, test spoustejte kolikrat chcete a pozorne ctete vystup
+z testu, abyste nasli ktere radky v testu zpusobily faily a na ty se soustredte.
+
+Osobne bych zacal spustenim testu, at vidite s cim budete pracovat.
+Hodne stesti!

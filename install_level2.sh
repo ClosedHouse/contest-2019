@@ -1,7 +1,7 @@
 # This script will prepare level for next user
 # Must be run with root priveleges
 # Change variables bellow to correct values
-TESTUSER="testuser"
+TESTUSER="oh"
 LEVELNAME="level2"
 
 REQFILE="$LEVELNAME/src/requirements.txt"
@@ -21,12 +21,12 @@ rpm -U --oldpackage "$LEVELNAME/src/factorial-1.0-1.fc29.noarch.rpm" > /dev/null
 # creating testdir and copying test files
 mkdir -p "$TESTDIR"
 cd "$LEVELNAME/src"
-cp -r factorial* build_package.sh rpmbuild/ grade.sh "$TESTDIR" && echo "Copying factorial related files"
+cp -r factorial factorial-1.1-1.fc29.noarch.rpm build_package.sh rpmbuild/ get_code.sh "$TESTDIR" && echo "Copying factorial related files"
 cp -r test/ "$TESTDIR/" && echo "Copying test related files"
 cd ../doc
-# TODO docs echo "Copying docs"
+cp -r hints/ README assignment.txt "$TESTDIR" && echo "Copying docs"
 cd ..
 chown -R "$TESTUSER:" $TESTDIR && echo "Changing level files owner to $TESTUSER"
-chown root: "$TESTDIR/grade.sh"
+chown root: "$TESTDIR/get_code.sh" && echo "Changing get_code.sh owner to root"
 
 echo "$LEVELNAME install finished"
