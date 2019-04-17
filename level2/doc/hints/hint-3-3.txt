@@ -1,0 +1,23 @@
+---EN---
+Insert this bit of code to line 76 of file factorial:
+
+    if arg == 0:
+        print(1)
+        exit(0)
+
+Test it locally and if you are satisfied with the result you can build new package. Just run type
+'./build_package.sh' and new version of factorial rpm will appear in level directory. Install it
+the same way you did older version in the first subtask and first failing command in "Edge cases"
+phase should fail no more.
+
+---CZ---
+Vlozte tento kousek kodu na radek 76 souboru factorial:
+
+    if arg == 0:
+        print(1)
+        exit(0)
+
+Otestuje zmenu lokalne a pokud jste spokojeni s vysledkem, muzete vybuildit novy balicek. Proste
+napiste './build_package.sh' a nova verze factorial rpm se obejvi v levelovem adresari. Nainstalujte
+ho stejnym zpusobem jako jste nainstalovali predchozi verzi v prvnim podukolu a prvni failujici
+prikaz ve fazi "Edge cases" by uz nemel failovat.

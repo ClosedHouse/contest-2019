@@ -1,0 +1,7 @@
+---EN---
+Syntax for dnf install is:
+dnf install "package"
+
+---CZ---
+Syntax pro dnf install je:
+dnf install "balicek"

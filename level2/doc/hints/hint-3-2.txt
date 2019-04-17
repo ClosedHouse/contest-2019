@@ -1,0 +1,16 @@
+---EN---
+First failing command expects 'factorial 0' to print 1. Easiest way to implement it would be
+to check the argument value before get_factorial() function is called inside function main()
+and if it is 0, print "1" to output and exit the program with 0 return code.
+You can test your program by typing './factorial 0' to command line in the level dir, even before
+you build a package with new version. However until you build and install the new version the test
+will still fail as it tests the installed version, not your local one.
+
+---CZ---
+Prvni failujici prikaz ocekava ze 'factorial 0' printne na obrazovku 1. Nejjednodussi zpusob jak
+to naimplementovat je zkontrolovat hodnotu argumentu pred tim nez get_factorial() funkce je
+zavolana z funkce main() a pokud je argument 0 tak vyprintovat "1" do outputu a exitovat program
+s navratovou hodnotou 0.
+Svuj program muzete otestovat napsanim './factorial 0' do prikazove radky pokud jste v adresari
+levelu, predtim ne vybuildite balicek s novou verzi. Nicmene dokud balicek nevybuildite a
+nenainstalujete test vam bude stale failovat, protoze testuje nainstalovanou verzi, ne vasi lokalni.

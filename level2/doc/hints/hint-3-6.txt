@@ -1,0 +1,12 @@
+---EN---
+If you have both checks implemented, type './build_package.sh' in level directory and new package
+with higher version will appear in the directory, install this rpm using dnf. If you run the test
+now all tests should pass. If it is so, type './get_code.sh' and you will get level code.
+Congratulations!
+
+---CZ---
+Pokud jste implementovali obe kontroly napiste './build_package.sh' v levelovem adresari a
+objevi se tam balicek s vyssi verzi, toto rpm nainstalujte pomoci dnf. Pokud test spustite
+nyni, vsechny testy by mely uspesne projit. Pokud to tak je, napiste './get_code.sh' a ziskate
+levelovy kod.
+Gratulujeme!

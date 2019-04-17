@@ -1,0 +1,17 @@
+---EN---
+Insert this bit of code to factorial file after the check for argument being 0:
+
+    if arg < 0:
+        sys.stderr.write("Factorial is not defined for negative integers!\n")
+        exit(11)
+
+Again, you can test it locally by typing './factorial -5' in level directory.
+
+---CZ---
+Vlozte tento kousek kodu do souboru factorial, za kontrolu argumentu na 0:
+
+    if arg < 0:
+        sys.stderr.write("Factorial is not defined for negative integers!\n")
+        exit(11)
+
+Opet muzete vyzkouset lokalni verzi napsanim './factorial -5' v levelovem adresari.

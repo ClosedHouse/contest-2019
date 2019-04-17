@@ -1,0 +1,7 @@
+---EN---
+To complete first subtask install the package using this command (you must be in level directory):
+sudo dnf install -y ./factorial-1.1-1.fc29.noarch.rpm
+
+---CZ---
+Pro splneni privniho podukolu nainstaluje balicek timto prikazem (musite but v levelovem adresari):
+sudo dnf install -y ./factorial-1.1-1.fc29.noarch.rpm
