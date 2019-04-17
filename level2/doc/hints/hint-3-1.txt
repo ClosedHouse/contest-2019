@@ -1,0 +1,9 @@
+---EN---
+There are two failing commands in phase "Edge cases". Look at them and think about how test expects
+factorial program will behave. Open file factorial from level directory and look where you could
+implement such behaviour.
+
+---CZ---
+Ve fazi "Edge cases" jsou 2 failujici prikazy. Podivejte se na ne a popremyslejte jak test ocekava
+ze se factorial bude chovat. Otevrete soubor factorial z leveloveho adresare a zamyslete se kam
+byste implementovali toto chovani.

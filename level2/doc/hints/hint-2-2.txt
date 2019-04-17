@@ -1,0 +1,7 @@
+---EN---
+How much is factorial of 5? :)
+You can get the value by typing 'factorial 5'.
+
+---CZ---
+Kolik je faktorial 5? :)
+Hodnotu muzete zjistit napsanim 'factorial 5'.

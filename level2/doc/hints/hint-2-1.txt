@@ -1,0 +1,7 @@
+---EN---
+Run the test, see the log and focus on phase "Common values". Find the failing assert in the test
+file test/runtest.sh.
+
+---CZ---
+Pustte test, podivejte se na test log a zamerte se na fazi "Common values". Failujici assert
+najdete v testu test/runtest.sh.

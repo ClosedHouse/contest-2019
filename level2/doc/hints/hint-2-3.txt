@@ -1,0 +1,13 @@
+---EN---
+Factorial of 5 is 120, so change line 59 of file test/runtest.sh to:
+
+rlAssertEquals "Calculate 5!" $(factorial 5) 120
+
+Phase "Common values" should pass after that.
+
+---CZ---
+Faktorial 5 je 120, takze zmente radek 59 souboru test/runtest.sh na:
+
+rlAssertEquals "Calculate 5!" $(factorial 5) 120
+
+Faze "Common values" by mela pote uspesne projit.

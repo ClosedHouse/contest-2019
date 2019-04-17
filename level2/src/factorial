@@ -72,6 +72,10 @@ def main():
             "Argument does not seem to be an integer.\nExiting unsuccessfully.\n")
         exit(10)
 
+    # TODO implement check for factorial 0
+
+    # TODO implement check for negavite integers
+
     print(get_factorial(arg))
 
     exit(0)

@@ -1,0 +1,9 @@
+---EN---
+Second command fails because factorial is not defined for negative integers and our implementation
+ignores that fact. The test however expects that if you call it with negative integer factorial
+will end with any non-zero exit code (and ideally prints out a warning).
+
+---CZ---
+Druhy prikaz failuje protoze faktorial neni definovany pro zaporna cela cisla a nase implementace
+tuto skutecnost ignoruje. Test nicmene ocekava ze pokud zavolate factorial se zapornym celym cislem,
+tak skonci s jakymkoli nenulovum navratovym kodem (a idealne vytiskne varovani).
