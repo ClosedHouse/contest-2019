@@ -110,7 +110,7 @@ Nicmene v tuto chvili je developer na dovolene a je na vas abyste tuto chybu nap
 Nejprve budete muset implementovat zmeny v souboru ./factorial tak, aby program pocital faktorial
 podle ocekavani.
 Pak budete muset vybuildit novou verzi balicku. Proces buildeni balicku muze byt matouci pro
-nekoho kdo na to neni zvykli, proto jsme pripravili skript, ktery ho pro vas vubuildi. Jednoduse
+nekoho kdo na to neni zvykly, proto jsme pripravili skript, ktery ho pro vas vybuildi. Jednoduse
 spuste skript ./build_package.sh a nove rpm s vyssi verzi by se melo objevit v levelovem adresari.
 Poslednim krokem je novy balicek naistalovat, stejne jako v prvnim podukolu.
 Pokud jste opravili oba edge casy, treti faze by mela uspesne projit, pokud nebude prochazet,

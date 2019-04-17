@@ -15,8 +15,8 @@ Now open file assignment.txt which will explain exactly what you need to do to c
 
 Zdravim, v tomto ukolu si budete moct castecne vyzkouset jake to je pracovat v Red Hatu jako tester a developer.
 Uvidite zjednodusenou verzi toho jak vypadaji nase testy a jak funguje balickovani.
-Pro dokonceni ukolu byste znat zaklady prace s Linuxovou prikazou radkou a trochu programovani (python),
-ale nemusite se bat, pokud se na necem zaseknete, budete mit k dispozici rady jak pokracovat.
+Pro dokonceni ukolu byste meli znat zaklady prace s Linuxovou prikazou radkou a trochu programovani
+(python), ale nemusite se bat, pokud se na necem zaseknete, budete mit k dispozici rady jak pokracovat.
 Vsechno co budete potrebovat pro uspesne dokonceni ukolu se nachazi v tomto adresari level2/,
 ktery v dokumentaci nazyvame "levelovy adresar".
 Nyni otevrete soubor assignment.txt ktery vam vysvetli co presne musite udelat abyste ukol dokoncili.
