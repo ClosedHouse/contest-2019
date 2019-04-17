@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 
 We are **BaseOS QE** team, which is taking care of RHEL's (Red Hat Enterprise Linux) quality as it's main responsibility. So, we test RHEL, but that doesn't mean we just cluelessly push buttons in the GUI :) We use a lot of different tools for testing (Bash, Python and testing frameworks written in those languages, automation, static code analyzers, etc.), we work in terminal most of the time, automate a lot and have to deal with a huge spectre of technology.
 
