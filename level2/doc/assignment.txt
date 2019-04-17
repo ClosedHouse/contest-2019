@@ -1,14 +1,14 @@
 ---EN---
 This file describes what you must do in order to complete this task, what tools to use, how to
-get hints if you get stuck and how to one get level code which (for 3 codes you might get a reward
+get hints if you get stuck and how to get a level code (for 3 codes you might get a reward
 from Red Hat staff supervising this activity).
 
 A) Assignment
-Task scenario is as follows: You are a Red Hat Quality Assurance engineer and you are in charge
+Task scenario is as follows: You are a Red Hat Quality Engineer and you are in charge
 of testing factorial package which provides /bin/factorial binary (you can type 'factorial 5' to
 command line to try in out).
-You have a test available which checks whether the factorial works as expected. The test is
-located in ./test directory. It consists of two files, Makefile which contains metadata (and which
+You have a test which checks whether the factorial works as expected. The test is
+located in the ./test directory. It consists of two files, Makefile which contains metadata (and which
 you can safely ignore) and runtest.sh which contains the test itself. You can run it either by
 calling 'make' inside the test directory or by directly running test/runtest.sh.
 However, as you might have guessed, the test is not passing at the moment and it is your goal
@@ -20,7 +20,7 @@ To successfully complete the level, you need to do 3 subtasks; each will fix one
 1)
 First phase called "Sanity" fails because developer forgot to take into consideration that
 someone could call factorial with non-numerical arguments (try calling 'factorial a' to see the
-traceback). Luckily he realized his error, fixed it and built a new package with correct
+traceback). Luckily, he realized his error, fixed it and built a new package with correct
 behaviour. It is up to you to test it. If you install a new provided package with version 1.1.1
 (located in level directory: ./factorial-1.1-1.fc29.noarch.rpm), the first phase should pass without
 fail. Use dnf program to install the version, don't forget that it needs to run under root, so use
