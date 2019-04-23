@@ -16,7 +16,7 @@ sed -i "\%$TESTUSER ALL= NOPASSWD: /usr/bin/dnf%d" /etc/sudoers && echo "Removin
 # adding testuser to sudoers
 echo "$TESTUSER ALL= NOPASSWD: /usr/bin/dnf" >> /etc/sudoers && echo "Adding $TESTUSER to sudoers"
 # installing "broken" version of factorial package
-rpm -U --oldpackage "$LEVELNAME/src/factorial-1.0-1.fc29.noarch.rpm" > /dev/null && echo "Installing \"broken\" factorial"
+rpm -U --oldpackage "src/factorial-1.0-1.fc29.noarch.rpm" > /dev/null && echo "Installing \"broken\" factorial"
 
 # creating testdir and copying test files
 mkdir -p "$TESTDIR"
