@@ -1,8 +1,0 @@
-Uvod do hry.
-
-- Popsat jednotlive urovne. Ceho se tykaji, jejich obory.
-  - co si odnesu? To je na kazde uloze.
-    Priklad: level3: psani testu v prirozenem jazyce (anglictina) s vyuzitim frameworku behave.
-- jak funguje hra
-- co je cilem
-- jak vypada kod?

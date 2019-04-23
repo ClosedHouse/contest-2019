@@ -15,8 +15,8 @@ popd
 pushd /root
 git pull https://github.com/ClosedHouse/"${CONTEST_DIR}".git
 
-pushd "${CONTEST_DIR}"
-    bash ./install_level2.sh
+pushd "${CONTEST_DIR}/level2"
+    bash ./install.sh
 popd
 
 pushd "${CONTEST_DIR}/task-behave"

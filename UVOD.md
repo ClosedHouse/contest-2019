@@ -6,7 +6,7 @@ V rámci této hry maté šanci si vyzkoušet pár z nich, konkretně budete hle
 
 Soutěž se skládá ze 3 levelů. V každém levelu potřebujete získat kód ve tvaru **OH19\_[A-Z1-9]** (neboli začínající OH19_). Jakmile kód získáte, level se považuje za splněný a máte nárok na dáreček :)
 
-V domácím adresáři **/home/oh** najdete složky **level1/**, **level2/** a **task-behave/**:
+V domácím adresáři **/home/oh** najdete složky **level1/**, **level2/** a **level3/**:
 
 ```
 $ cd /home/oh

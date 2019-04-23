@@ -20,7 +20,7 @@ rpm -U --oldpackage "$LEVELNAME/src/factorial-1.0-1.fc29.noarch.rpm" > /dev/null
 
 # creating testdir and copying test files
 mkdir -p "$TESTDIR"
-cd "$LEVELNAME/src"
+cd "src"
 cp -r factorial factorial-1.1-1.fc29.noarch.rpm build_package.sh rpmbuild/ get_code.sh "$TESTDIR" && echo "Copying factorial related files"
 cp -r test/ "$TESTDIR/" && echo "Copying test related files"
 cd ../doc

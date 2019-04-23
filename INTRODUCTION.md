@@ -6,7 +6,7 @@ In this game you have a chance to try some of those. You'll look for security ex
 
 The game is composed of 3 levels. In each level you have to get a secret code that should match pattern **OH19\_[A-Z1-9]** (aka it is prefixed by OH19_). As soon as you get the secret code, level is considered done and you may get a gift :)
 
-In your home directory **/home/oh** you will find **level1/**, **level2/** and **task-behave/** directories:
+In your home directory **/home/oh** you will find **level1/**, **level2/** and **level3/** directories:
 
 ```
 $ cd /home/oh
