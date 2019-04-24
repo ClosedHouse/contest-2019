@@ -1,0 +1,19 @@
+Oslovovat lidi na miste co dokoncili soutez -> vice hirovat
+- domluvit se dopredu
+
+- nevyhanet lidi, ale zkusit je predat nekomu, kdo je zpracuje na nejakou pozici
+Vsem plosne naznacit, ze na neco maji + rozdat diplom se jmenem + razitka uspesnosti:
+- zelvicka
+- klokanek
+- lev
+- gepart
+- tygr
+- drak
+
+- knizecka/tabule se stromem voleb s otazkama + prejdi na stranu pokud te bavi treba python
+    -> nasledne navedeni na pozice
+
+
+- napsat check scripty - grade scripty
+
+- spravne kody
